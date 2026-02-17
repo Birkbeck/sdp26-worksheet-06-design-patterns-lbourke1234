@@ -1,8 +1,10 @@
 package singleton;
 
 public class SingletonProtected {
+    private static SingletonProtected instance;
     public static SingletonProtected getInstance() {
-        // TODO: implement Singleton
-        return null;
+        if (instance == null)
+            instance = new SingletonProtected();
+        return instance;
     }
 }
